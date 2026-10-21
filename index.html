@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STUNITED | Corporate Etiquette Webinar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #17233d;
+            line-height: 1.6;
+        }
+
+        /* Website Header */
+        header {
+            background-color: #102342;
+            padding: 18px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-box {
+            background-color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+        }
+
+        .logo-box img {
+            display: block;
+            width: 150px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #48d6c5;
+        }
+
+        /* Webinar Hero Section */
+        .hero {
+    padding: 100px 8%;
+    text-align: center;
+    background:
+        radial-gradient(circle at top right, #246b83 0%, transparent 40%),
+        linear-gradient(135deg, #0b1930, #174c70);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}x
+
+.hero p {
+    font-size: 19px;
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: #e4edf7;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+        .tag {
+            display: inline-block;
+            background-color: #48d6c5;
+            color: #102342;
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #e4edf7;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #48d6c5;
+            color: #102342;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+        }
+
+        /* General Sections */
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #102342;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: #5e687a;
+        }
+
+        /* Event Details */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .detail-card {
+    background-color: white;
+    padding: 28px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(16, 35, 66, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(16, 35, 66, 0.12);
+}
+
+        .detail-card h3 {
+            color: #168f91;
+            margin-bottom: 8px;
+        }
+
+        /* Learning Outcomes */
+        .learning {
+            background-color: white;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .learning-item {
+            background-color: #f5f7fb;
+            padding: 20px;
+            border-left: 4px solid #48d6c5;
+            border-radius: 6px;
+        }
+
+        /* Speaker Section */
+        .speaker-box {
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        .speaker-box p {
+            color: #5e687a;
+        }
+
+        /* Registration Section */
+        .register {
+            text-align: center;
+            background-color: #102342;
+            color: white;
+        }
+
+        .register h2 {
+            color: white;
+        }
+
+        .register p {
+            margin: 15px auto 25px;
+            color: #e4edf7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #09172c;
+            color: #d7dfeb;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        /* Mobile-Friendly Layout */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .details-grid,
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-box">
+            <img src="stunited-logo.jpg" alt="STUNITED Logo">
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#learning">What You'll Learn</a>
+            <a href="#speaker">Speaker</a>
+            <a href="#register">Register</a>
+        </nav>
+    </header>
+
+    <!-- Main Banner -->
+    <main>
+        <section class="hero" id="about">
+            <span class="tag">FREE ONLINE WEBINAR</span>
+
+            <h1>Corporate Etiquette<br>Webinar</h1>
+
+            <p>
+                Build your professional presence, strengthen your workplace
+                communication, and learn the essential etiquette skills
+                for a successful career.
+            </p>
+
+            <a class="button"
+   href="https://wkf.ms/3TMuMBy"
+   target="_blank"
+   rel="noopener noreferrer">
+    Reserve Your Place
+</a>
+
+        </section>
+
+        <!-- Event Details -->
+        <section id="details">
+            <h2 class="section-title">Webinar Details</h2>
+
+            <p class="section-description">
+                Everything you need to know before joining us.
+            </p>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3>📅 Date</h3>
+                    <p>To Be Announced</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>🕐 Time</h3>
+                    <p>1:00 PM – 2:00 PM</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>💻 Platform</h3>
+                    <p>Online | Free to Attend</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section class="learning" id="learning">
+            <h2 class="section-title">What You'll Learn</h2>
+
+            <p class="section-description">
+                Develop practical skills to help you feel confident
+                in professional and workplace environments.
+            </p>
+
+            <div class="learning-grid">
+                <div class="learning-item">
+                    <h3>Professional Communication</h3>
+                    <p>Communicate clearly, confidently, and respectfully.</p>
+                </div>
+
+                <div class="learning-item">
+                    <h3>Workplace Etiquette</h3>
+                    <p>Understand professional behaviour and expectations.</p>
+                </div>
+
+                <div class="learning-item">
+                    <h3>Meeting Etiquette</h3>
+                    <p>Learn how to participate professionally in meetings.</p>
+                </div>
+
+                <div class="learning-item">
+                    <h3>Professional Presence</h3>
+                    <p>Build confidence and make a positive first impression.</p>
+                </div>
+
+                <div class="learning-item">
+                    <h3>Networking Skills</h3>
+                    <p>Build meaningful and professional connections.</p>
+                </div>
+
+                <div class="learning-item">
+                    <h3>Career Confidence</h3>
+                    <p>Prepare yourself for professional opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speaker -->
+        <section id="speaker">
+            <h2 class="section-title">Meet the Speaker</h2>
+
+            <p class="section-description">
+                Our speaker details will be announced soon.
+            </p>
+
+            <div class="speaker-box">
+                <h3>Speaker Announcement Coming Soon</h3>
+                <p>
+                    Stay connected for updates about our guest speaker
+                    and their professional experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Registration -->
+        <section class="register" id="register">
+            <h2 class="section-title">Ready to Elevate Your Professional Skills?</h2>
+
+            <p>
+                Join our free Corporate Etiquette Webinar.
+                Register your interest today!
+            </p>
+
+            <!-- Replace # with your Monday.com registration form link later -->
+            <a class="button" href="https://wkf.ms/3TMuMBy" target="_blank" rel="noopener noreferrer">Register Now</a>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 STUNITED. All rights reserved.</p>
+        <p>Empowering students and graduates for a successful future.</p>
+    </footer>
+
+</body>
+</html>
